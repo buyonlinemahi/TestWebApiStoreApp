@@ -1,0 +1,257 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+    <h3 class="kt-subheader__title">
+        Products
+    </h3>
+
+    <span class="kt-subheader__separator kt-subheader__separator--v"></span>
+
+    <div class="kt-subheader__group" id="kt_subheader_search">
+        <span class="kt-subheader__desc" id="kt_subheader_total">
+
+        </span>
+
+        <form class="kt-margin-l-20 hide-submit" id="kt_subheader_search_form">
+            <div class="kt-input-icon kt-input-icon--right kt-subheader__search">
+                <input type="text" name="searchtext" id="searchtext" data-bind="value:searchText" class="form-control" placeholder="Search...">
+                <label style="position: absolute; top: 5px; right: 10px;">
+                    <span class="kt-input-icon__icon kt-input-icon__icon--right">
+                        <span>
+                            <input data-bind="click:$root.SearchUser" type="submit" />
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <rect x="0" y="0" width="24" height="24" />
+                                    <path d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                                    <path d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z" fill="#000000" fill-rule="nonzero" />
+                                </g>
+                            </svg>                                    <!--<i class="flaticon2-search-1"></i>-->
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </form>
+    </div>
+    <a class="btn btn-primary kt-margin-b-25" href="#" data-bind="click:AddCoupon" role="button">New Product</a>
+    <!--begin::Portlet-->
+    <div class="kt-portlet kt-portlet--mobile">
+        <div class="kt-portlet__body kt-portlet__body--fit">
+            <!--begin: Datatable -->
+            <div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="kt_apps_user_list_datatable" style="">
+                <table class="kt-datatable__table" style="display: block;">
+                    <thead class="kt-datatable__head">
+                        <tr class="kt-datatable__row" style="left: 0px;">
+                            <th data-field="TurnOnOff" class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check">
+                                <span style="width: 50px;">Publish</span>
+                            </th>
+                            <th data-field="CouponCode" class="kt-datatable__cell kt-datatable__cell--sort">
+                                <span style="width: 200px;">Product Name</span>
+                            </th>
+                            <th data-field="Comment" class="kt-datatable__cell kt-datatable__cell--sort">
+                                <span style="width: 181px;">Comment</span>
+                            </th>
+                            <th data-field="Discount" class="kt-datatable__cell kt-datatable__cell--sort">
+                                <span style="width: 181px;">Discount</span>
+                            </th>
+                            <th data-field="UsersLeft" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
+                                <span style="width: 252px;">Users left</span>
+                            </th>
+                            <th data-field="UsersCount" class="kt-datatable__cell kt-datatable__cell--sort">
+                                <span style="width: 100px;">Users Count</span>
+                            </th>
+                            <th data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
+                                <span style="width: 110px;">&nbsp;</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="kt-datatable__body" style="">
+                        <tr data-row="0" class="kt-datatable__row" style="left: 0px;">
+                            <td class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check" data-field="TurnOnOff">
+                                <span style="width: 50px;">
+                                    <a href="#">
+                                        <i style="font-size:22px;" class="fa fa-toggle-on"></i>
+                                    </a>
+                                </span>
+                            </td>
+                            <td data-field="CouponCode" class="kt-datatable__cell">
+                                <span class="kt-font-bold" style="width: 200px;">Thank You</span>
+                            </td>
+                            <td data-field="Comment" class="kt-datatable__cell">
+                                <span style="width: 181px;">Thanks for being loyal customer</span>
+                            </td>
+                            <td data-field="Discount" class="kt-datatable__cell">
+                                <span style="width: 181px;">15%</span>
+                            </td>
+                            <td data-field="UsersLeft" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <span style="width: 252px;">11</span>
+                            </td>
+                            <td data-field="UsersCount" class="kt-datatable__cell">
+                                <span style="width: 100px;">25</span>
+                            </td>
+                            <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <span style="width: 110px;">
+                                    <button type="button" class="btn btn-warning"><i style="font-size:12px;" class="fa fa-trash-alt"></i> Delete</button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr data-row="0" class="kt-datatable__row" style="left: 0px;">
+                            <td class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check" data-field="TurnOnOff">
+                                <span style="width: 50px;">
+                                    <a href="#">
+                                        <i style="font-size:22px;" class="fa fa-toggle-off"></i>
+                                    </a>
+                                </span>
+                            </td>
+                            <td data-field="CouponCode" class="kt-datatable__cell">
+                                <span class="kt-font-bold" style="width: 200px;">Thank You</span>
+                            </td>
+                            <td data-field="Comment" class="kt-datatable__cell">
+                                <span style="width: 181px;">Thanks for being loyal customer</span>
+                            </td>
+                            <td data-field="Discount" class="kt-datatable__cell">
+                                <span style="width: 181px;">15%</span>
+                            </td>
+                            <td data-field="UsersLeft" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <span style="width: 252px;">11</span>
+                            </td>
+                            <td data-field="UsersCount" class="kt-datatable__cell">
+                                <span style="width: 100px;">25</span>
+                            </td>
+                            <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <span style="width: 110px;">
+                                    <button type="button" class="btn btn-warning"><i style="font-size:12px;" class="fa fa-trash-alt"></i> Delete</button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr data-row="0" class="kt-datatable__row" style="left: 0px;">
+                            <td class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check" data-field="TurnOnOff">
+                                <span style="width: 50px;">
+                                    <a href="#">
+                                        <i style="font-size:22px;" class="fa fa-toggle-on"></i>
+                                    </a>
+                                </span>
+                            </td>
+                            <td data-field="CouponCode" class="kt-datatable__cell">
+                                <span class="kt-font-bold" style="width: 200px;">Thank You</span>
+                            </td>
+                            <td data-field="Comment" class="kt-datatable__cell">
+                                <span style="width: 181px;">Thanks for being loyal customer</span>
+                            </td>
+                            <td data-field="Discount" class="kt-datatable__cell">
+                                <span style="width: 181px;">15%</span>
+                            </td>
+                            <td data-field="UsersLeft" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <span style="width: 252px;">11</span>
+                            </td>
+                            <td data-field="UsersCount" class="kt-datatable__cell">
+                                <span style="width: 100px;">25</span>
+                            </td>
+                            <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <span style="width: 110px;">
+                                    <button type="button" class="btn btn-warning"><i style="font-size:12px;" class="fa fa-trash-alt"></i> Delete</button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr data-row="0" class="kt-datatable__row" style="left: 0px;">
+                            <td class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check" data-field="TurnOnOff">
+                                <span style="width: 50px;">
+                                    <a href="#">
+                                        <i style="font-size:22px;" class="fa fa-toggle-on"></i>
+                                    </a>
+                                </span>
+                            </td>
+                            <td data-field="CouponCode" class="kt-datatable__cell">
+                                <span class="kt-font-bold" style="width: 200px;">Thank You</span>
+                            </td>
+                            <td data-field="Comment" class="kt-datatable__cell">
+                                <span style="width: 181px;">Thanks for being loyal customer</span>
+                            </td>
+                            <td data-field="Discount" class="kt-datatable__cell">
+                                <span style="width: 181px;">15%</span>
+                            </td>
+                            <td data-field="UsersLeft" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <span style="width: 252px;">11</span>
+                            </td>
+                            <td data-field="UsersCount" class="kt-datatable__cell">
+                                <span style="width: 100px;">25</span>
+                            </td>
+                            <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <span style="width: 110px;">
+                                    <button type="button" class="btn btn-warning"><i style="font-size:12px;" class="fa fa-trash-alt"></i> Delete</button>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="kt-datatable__pager kt-datatable--paging-loaded">
+                    <ul class="kt-datatable__pager-nav">
+                        <li>
+                            <a title="First" class="kt-datatable__pager-link kt-datatable__pager-link--first kt-datatable__pager-link--disabled" data-page="1" disabled="disabled">
+                                <i class="flaticon2-fast-back"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Previous" class="kt-datatable__pager-link kt-datatable__pager-link--prev kt-datatable__pager-link--disabled" data-page="1" disabled="disabled">
+                                <i class="flaticon2-back"></i>
+                            </a>
+                        </li>
+                        <li style=""></li>
+                        <li style="display: none;">
+                            <input type="text" class="kt-pager-input form-control" title="Page number">
+                        </li>
+                        <li>
+                            <a class="kt-datatable__pager-link kt-datatable__pager-link-number kt-datatable__pager-link--active" data-page="1" title="1">1</a>
+                        </li>
+                        <li>
+                            <a class="kt-datatable__pager-link kt-datatable__pager-link-number" data-page="2" title="2">2</a>
+                        </li>
+                        <li>
+                            <a class="kt-datatable__pager-link kt-datatable__pager-link-number" data-page="3" title="3">3</a>
+                        </li>
+                        <li>
+                            <a class="kt-datatable__pager-link kt-datatable__pager-link-number" data-page="4" title="4">4</a>
+                        </li>
+                        <li style=""></li>
+                        <li>
+                            <a title="Next" class="kt-datatable__pager-link kt-datatable__pager-link--next" data-page="2">
+                                <i class="flaticon2-next"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a title="Last" class="kt-datatable__pager-link kt-datatable__pager-link--last" data-page="4">
+                                <i class="flaticon2-fast-next"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--end: Datatable -->
+        </div>
+    </div>
+    <!--end::Portlet-->
+    <!--begin::Modal-->
+    <div class="modal fade" id="kt_datatable_records_fetch_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Selected Records</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="kt-scroll ps" data-scroll="true" data-height="200" style="height: 200px; overflow: hidden;">
+                        <ul id="kt_apps_user_fetch_records_selected"></ul>
+                        <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-brand" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end::Modal-->
+</div>

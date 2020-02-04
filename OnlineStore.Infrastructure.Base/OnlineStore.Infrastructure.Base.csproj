@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnlineStore.Domain.Model\OnlineStore.Domain.Model.csproj" />
+    <ProjectReference Include="..\OnlineStore.Infrastructure.Global\OnlineStore.Infrastructure.Global.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\..\..\..\Mail Management\MailManagement\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

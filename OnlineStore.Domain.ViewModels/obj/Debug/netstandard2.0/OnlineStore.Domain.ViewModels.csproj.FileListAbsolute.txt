@@ -1,0 +1,14 @@
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\bin\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.deps.json
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\bin\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\bin\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.pdb
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\bin\Debug\netstandard2.0\OnlineStore.Domain.Model.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\bin\Debug\netstandard2.0\OnlineStore.Domain.Model.pdb
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\obj\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.csprojAssemblyReference.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\obj\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.csproj.CoreCompileInputs.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\obj\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.AssemblyInfoInputs.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\obj\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.AssemblyInfo.cs
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\obj\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.csproj.CopyComplete
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\obj\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Domain.ViewModels\obj\Debug\netstandard2.0\OnlineStore.Domain.ViewModels.pdb

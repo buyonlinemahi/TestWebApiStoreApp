@@ -1,0 +1,9 @@
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.deps.json
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.pdb
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.csprojAssemblyReference.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.csproj.CoreCompileInputs.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.AssemblyInfoInputs.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.AssemblyInfo.cs
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.ApplicationServices.Contracts\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.ApplicationServices.Contracts.pdb

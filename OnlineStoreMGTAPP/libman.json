@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "knockout@3.5.0",
+      "destination": "wwwroot/knockout/"
+    },
+    {
+      "library": "jquery@3.4.1",
+      "destination": "wwwroot/jquery/"
+    },
+    {
+      "library": "knockout.mapping@2.4.1",
+      "destination": "wwwroot/lib/knockout.mapping/"
+    },
+    {
+      "library": "knockout-paging@0.4.0",
+      "destination": "wwwroot/knockout-paging/"
+    },
+    {
+      "library": "knockout-bootstrap@0.2.1",
+      "destination": "wwwroot/knockout-bootstrap/"
+    },
+    {
+      "library": "jquery.mask@1.14.16",
+      "destination": "wwwroot/jquery.mask/"
+    },
+    {
+      "library": "jquery-validate@1.19.1",
+      "destination": "wwwroot/lib/jquery-validate/"
+    },
+    {
+      "library": "magnific-popup.js@1.1.0",
+      "destination": "wwwroot/magnific-popup.js/"
+    },
+    {
+      "provider": "unpkg",
+      "library": "jquery-ajax-unobtrusive@3.2.6",
+      "destination": "wwwroot/lib/jquery.unobtrusive.ajax/",
+      "files": [
+        "dist/jquery.unobtrusive-ajax.js",
+        "dist/jquery.unobtrusive-ajax.min.js"
+      ]
+    },
+    {
+      "library": "jquery-autocomplete@1.0.7",
+      "destination": "wwwroot/jquery-autocomplete/",
+      "files": [
+        "jquery.auto-complete.min.js",
+        "jquery.auto-complete.css",
+        "jquery.auto-complete.js"
+      ]
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/jqueryui/jqueryui/",
+      "files": [
+        "jquery-ui.min.js",
+        "jquery-ui.css",
+        "jquery-ui.js"
+      ]
+    }
+  ]
+}

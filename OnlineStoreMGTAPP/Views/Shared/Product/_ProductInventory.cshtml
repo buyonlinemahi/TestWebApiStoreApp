@@ -1,0 +1,52 @@
+﻿
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>SKU</label>
+            <input type="text" class="form-control" id="txtSKU" placeholder="Enter SKU">
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>Manage stock? &nbsp;</label>
+            <label class="kt-checkbox">
+                <input type="checkbox" id="chkIsManage"> Enable stock management at product level
+                <span></span>
+            </label>
+        </div>
+    </div>
+    @*<div class="col-md-12">
+        <div class="form-group">
+            <label>Stock quantity</label>
+            <input type="text" class="form-control" placeholder="Enter quantity">
+        </div>
+    </div>*@
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>Allow backorders?</label>
+            <select class="form-control" id="ddStockStatusID" name="StockStatusID" data-bind="options: AllStatus, optionsText: 'statusName', optionsValue: 'stockStatUsID',optionsCaption: 'Select Status', value: selectedStatus" required></select>
+        </div>
+    </div>
+    @*<div class="col-md-12">
+        <div class="form-group">
+            <label>Low stock threshold</label>
+            <input type="text" class="form-control" placeholder="Enter threshold">
+        </div>
+    </div>*@
+    @*<div class="col-md-12">
+        <div class="form-group">
+            <label>Sold individually &nbsp;</label>
+            <label class="kt-checkbox">
+                <input type="checkbox"> Enable this to only allow one of this items
+                <span></span>
+            </label>
+        </div>
+    </div>*@
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>Unit of measure</label>
+            <select class="form-control" id="ddMeasurementUnitID" name="MeasurementUnitID" data-bind="options: AllMeasurementUnit, optionsText: 'measurementUnitName', optionsValue: 'measurementUnitID',optionsCaption: 'Select unit', value: selectedMeasurementUnit" required></select>
+        </div>
+    </div>
+</div>
+<button type="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-bind="click:SaveProductInventory">Save</button>

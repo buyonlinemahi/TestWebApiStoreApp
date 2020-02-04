@@ -1,0 +1,66 @@
+﻿@using OnlineStore.Infrastructure.Global;
+@{
+    ViewData["Title"] = "AddUser";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add User</h2>
+
+<div id="UserDiv">
+    @using (Html.BeginForm(GlobalConst.Actions.UserController.AddUser, GlobalConst.Controller.User, Microsoft.AspNetCore.Mvc.Rendering.FormMethod.Post, new
+    {
+    }))
+    {
+        <div class="kt-login__form">
+            <div class="form-group">
+                <input class="form-control" type="text" required="required" placeholder="FirstName" name="FirstName">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" required="required" placeholder="LastName" name="LastName">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" id="emailIDExists" required="required" placeholder="Email" name="EmailID" autocomplete="off">
+                <div id="messageblock" style="display:none">
+                    <p class="help-block" style="color:#ab1135;">Email ID Already Exists</p>
+                </div>
+                <div id="messageblockEmailFormat" style="display:none">
+                    <p class="help-block" style="color:#ab1135;">Email Format is not Correct</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="phoneMaskID" type="text" required="required" placeholder="Phone" name="Phone" autocomplete="off" data-inputmask="'mask': '(999) 999-9999'">
+            </div>
+            <div class="form-group">
+                <input class="form-control" id="objpassword" type="password" required="required" placeholder="Password" name="Password">
+            </div>
+            <div class="form-group">
+                <input class="form-control form-control-last" id="objpasswordConfrim" required="required" type="password" placeholder="Confirm Password" name="rpassword">
+                <span id='message'></span>
+            </div>
+            <div class="form-group">
+                <select id="IsActive" name="IsActive" class="form-control" data-bind="options:$root.UserStatus, optionsText:'StatusName',optionsValue:'Status', value:IsActive"></select>
+            </div>
+            <div class="form-group">
+                <select id="UserTypeID" name="UserTypeID" class="form-control" data-bind="options:$root.AllUserTypes, optionsText:'userName',optionsValue:'userTypeID', value:userTypeID"></select>
+            </div>
+
+            <div class="kt-login__actions">
+                <button id="BtnAdding" type="submit" class="btn btn-brand btn-pill btn-elevate">Submit</button>
+                <button id="kt_login_signup_cancel" class="btn btn-outline-brand btn-pill">Cancel</button>
+            </div>
+        </div>
+        @ViewBag.Text
+    }
+
+</div>
+
+<script src="~/Scripts/KnockoutViewModel/User/UserViewModel.js" asp-append-version="true"></script>
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alertify.alert("@ViewBag.Message");
+            };
+    </script>
+}

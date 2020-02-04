@@ -1,0 +1,133 @@
+﻿
+@{
+    ViewData["Title"] = "AddDiscountCoupon";
+}
+
+<div id="DiscountCouponDiv">
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <!--begin::Portlet-->
+                <div class="kt-portlet">
+                    <div class="kt-portlet__head">
+                        <div class="kt-portlet__head-label">
+                            <h3 class="kt-portlet__head-title">
+                                Add Coupon Discount
+                            </h3>
+                        </div>
+                    </div>
+                    <!--begin::Form-->
+                    <form class="kt-form">
+                        <div class="kt-portlet__body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Code</label>
+                                        <input type="text" class="form-control" id="txtCouponCode"  value=@ViewBag.CouponCode disabled>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Comment</label>
+                                        <input type="text" class="form-control" name="CouponComment" data-bind="value:CouponComment" placeholder="Enter Comment">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="kt-checkbox">
+                                            <input type="checkbox" name="IsEnable" id="chkIsEnable" > Enabled
+                                            <span></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Discount Type</label>
+                                        <select class="form-control" id="ddDiscountTypeID" data-bind="options: AllDiscountTypes, optionsText: 'discountTypeName', optionsValue: 'discountTypeID',optionsCaption: 'Select Discount Type', value: selectedDiscountType, event: { change: selectionChanged }"></select>
+                                    </div>
+                                </div>
+                                <div id="DicountAmount" hidden>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Discount Amount</label>
+                                            <input type="text" class="form-control" id="txtDiscountAmount" name="DiscountAmount" data-bind="value:DiscountAmount" onkeypress="return isNumberKey(event)" placeholder="Enter Amount">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Active From</label>
+                                        <input type="text" id="Activefrom" name="ActiveFromDate" data-bind="value:ActiveFromDate" class="form-control" placeholder="Enter Active From">
+                                      
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Active Till</label>
+                                        <input type="text" id="ActiveTill" name="ActiveTillDate" data-bind="value:ActiveTillDate" class="form-control" placeholder="Enter Active Till">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Subtotal Range (begin)</label>
+                                        <input type="text" class="form-control" name="SubtotalRangeBegin" data-bind="value:SubtotalRangeBegin" onkeypress="return isNumberKey(event)" placeholder="Enter Subtotal Range (begin)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Subtotal Range (end)</label>
+                                        <input type="text" class="form-control" name="SubtotalRangeEnd" data-bind="value:SubtotalRangeEnd"  onkeypress="return isNumberKey(event)" placeholder="Enter Subtotal Range (end)">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Limit the Number of Uses</label>
+                                        <input type="text" class="form-control" name="NumberOfUsers" data-bind="value:NumberOfUsers" onkeypress="return isNumberKey(event)" placeholder="Enter Limit the Number of Uses">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kt-portlet__foot">
+                            <div class="kt-form__actions">
+                                <button type="reset"  data-bind="click:SaveDiscountCoupon" class="btn btn-primary">Submit</button>
+                                <button type="reset" class="btn btn-secondary">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Portlet-->
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{   
+
+    <script src="~/Scripts/KnockoutViewModel/DiscountCoupon/DiscountCouponViewModel.js" asp-append-version="true">
+        var _discountCouponViewModel = new DiscountCouponViewModel();
+        ko.applyBindings(_discountCouponViewModel, $("#DiscountCouponDiv").get(0));
+    </script>
+
+    <script>       
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+
+        var today = new Date();
+        $("#Activefrom").datepicker({
+            minDate: 0
+        });
+       
+        $("#ActiveTill").datepicker({
+            minDate: 0
+        });
+    </script>
+
+}
+

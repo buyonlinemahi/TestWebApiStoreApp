@@ -1,0 +1,9 @@
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.deps.json
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.pdb
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.csprojAssemblyReference.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.csproj.CoreCompileInputs.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.AssemblyInfoInputs.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.AssemblyInfo.cs
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.Global\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.Global.pdb

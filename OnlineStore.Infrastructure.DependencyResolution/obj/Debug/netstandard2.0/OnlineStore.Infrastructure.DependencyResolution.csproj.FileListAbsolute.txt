@@ -1,0 +1,9 @@
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.deps.json
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\bin\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.pdb
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.csprojAssemblyReference.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.csproj.CoreCompileInputs.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.AssemblyInfoInputs.cache
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.AssemblyInfo.cs
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.dll
+D:\Mahi_TFS\Store (To Be Named After)\Web\MGT\OnlineStore.Infrastructure.DependencyResolution\obj\Debug\netstandard2.0\OnlineStore.Infrastructure.DependencyResolution.pdb

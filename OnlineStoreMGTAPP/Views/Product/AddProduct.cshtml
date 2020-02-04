@@ -1,0 +1,454 @@
+﻿@using OnlineStore.Infrastructure.Global;
+
+@{
+    ViewData["Title"] = "AddProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="ProductDetailDiv">
+    <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
+        <div class="kt-wizard-v4" id="kt_wizard_v4" data-ktwizard-state="step-first">
+            <!--begin: Form Wizard Nav -->
+            <div class="kt-wizard-v4__nav">
+
+                <!--doc: Remove "kt-wizard-v4__nav-items--clickable" class and also set 'clickableSteps: false' in the JS init to disable manually clicking step titles -->
+                <div class="kt-wizard-v4__nav-items kt-wizard-v4__nav-items--clickable">
+                    <div class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
+                        <div class="kt-wizard-v4__nav-body">
+                            <div class="kt-wizard-v4__nav-number">
+                                1
+                            </div>
+                            <div class="kt-wizard-v4__nav-label">
+                                <div class="kt-wizard-v4__nav-label-title">
+                                    General
+                                </div>
+                                <div class="kt-wizard-v4__nav-label-desc">
+                                    Enter Product Details
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-wizard-v4__nav-item" data-ktwizard-type="step" data-ktwizard-state="current">
+                        <div class="kt-wizard-v4__nav-body">
+                            <div class="kt-wizard-v4__nav-number">
+                                2
+                            </div>
+                            <div class="kt-wizard-v4__nav-label">
+                                <div class="kt-wizard-v4__nav-label-title">
+                                    Description
+                                </div>
+                                <div class="kt-wizard-v4__nav-label-desc">
+                                    Enter Product Details
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-wizard-v4__nav-item" data-ktwizard-type="step">
+                        <div class="kt-wizard-v4__nav-body">
+                            <div class="kt-wizard-v4__nav-number">
+                                3
+                            </div>
+                            <div class="kt-wizard-v4__nav-label">
+                                <div class="kt-wizard-v4__nav-label-title">
+                                    Inventory
+                                </div>
+                                <div class="kt-wizard-v4__nav-label-desc">
+                                    Enter Product Availability
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-wizard-v4__nav-item" data-ktwizard-type="step">
+                        <div class="kt-wizard-v4__nav-body">
+                            <div class="kt-wizard-v4__nav-number">
+                                4
+                            </div>
+                            <div class="kt-wizard-v4__nav-label">
+                                <div class="kt-wizard-v4__nav-label-title">
+                                    Shipping
+                                </div>
+                                <div class="kt-wizard-v4__nav-label-desc">
+                                    Add Shipping Details
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="kt-wizard-v4__nav-item" data-ktwizard-type="step">
+                        <div class="kt-wizard-v4__nav-body">
+                            <div class="kt-wizard-v4__nav-number">
+                                5
+                            </div>
+                            <div class="kt-wizard-v4__nav-label">
+                                <div class="kt-wizard-v4__nav-label-title">
+                                    Completed
+                                </div>
+                                <div class="kt-wizard-v4__nav-label-desc">
+                                    Draft or Publish
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end: Form Wizard Nav -->
+
+            <div class="kt-portlet">
+                <div class="kt-portlet__body kt-portlet__body--fit">
+                    <div class="kt-grid">
+
+                        <div class="kt-grid__item kt-grid__item--fluid kt-wizard-v4__wrapper">
+                            <!--begin: Form Wizard Form-->
+
+                            <div class="kt-form" id="kt_form1">
+                                <!--begin: Form Wizard Step 1-->
+
+                                <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
+
+                                    <div class="kt-heading kt-heading--md">Enter your Product Details</div>
+                                    <div class="kt-form__section kt-form__section--first">
+
+                                        <div class="kt-wizard-v4__form">
+
+
+                                            <form method="post" data-ajax="true" asp-controller="" asp-action="" data-ajax-begin="ProductInfoFormBeforeSubmit" enctype="multipart/form-data">
+                                                <!--begin: Form Wizard Step 1-->
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Product Title</label>
+                                                            <input type="text" id="txtTitle" name="Title" class="form-control" placeholder="Enter Title" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>MRP</label>
+                                                            $<input type="text" id="txtMRP" name="MRP" class="form-control" placeholder="Enter MRP" required onkeypress="return isNumberKey(event)">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>Price</label>
+                                                            $<input type="text" id="txtPrice" name="Price" class="form-control" placeholder="Enter Price" required onkeypress="return isNumberKey(event)">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>&nbsp;</label>
+                                                            <button type="button" class="btn btn-primary" id="objupload" data-toggle="modal" data-target="#EditorModal1" style="display:block;"><i class="fa fa-image"></i>Upload Photo</button>
+                                                            <!--begin::Modal-->
+                                                            <div class="panel-body">
+                                                                <div class="modal fade EditorModal" id="EditorModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                                    <div class="modal-dialog position-center set-popup">
+                                                                        <div class="modal-content panel panel-default" style="height:800px; width:900px; border-radius:10px;">
+                                                                            <div class="panel-heading">
+                                                                                <button type="button" id="btnCloseAddPhoto" class="close" style="margin:2px; color:black;" aria-hidden="true">&times;</button>
+                                                                                <h4 class="modal-title">Add & Crop Image</h4>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <div class="panel-body">
+                                                                                    <div class="imageCroppercontainer">
+                                                                                        <div class="imageBox">
+                                                                                            <div class="thumbBox"></div>
+                                                                                            <div class="spinner" style="display: none">Loading...</div>
+                                                                                        </div>
+                                                                                        <div class="action">
+                                                                                            <label style="float:left; width: 75px; line-height:40px;">Slide Pics: </label>
+                                                                                            <input type="file" id="file" class="fileCrop btn" style="float:left; width: 250px; margin:1px;" />
+                                                                                            <input type="button" class="btn button-crop-popup" id="btnCrop" value="Crop" style="float: right" />
+                                                                                            <input type="button" class="btn button-crop-popup" id="btnZoomIn" value="+" style="float: right" />
+                                                                                            <input type="button" class="btn button-crop-popup" id="btnZoomOut" value="-" style="float: right" />
+                                                                                        </div>
+                                                                                        <div style="padding-top:10px;float:right">
+                                                                                            <button type="button" id="btnContinueAddPhoto" data-dismiss="modal" aria-hidden="true" class="btn btn-default">Continue</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="heightcrop">
+                                                                                        <div id="cropList" class="cropped">
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--end::Modal-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Category</label>
+                                                                    <select class="form-control" id="ddCategoryID" name="CategoryID" data-bind="options: AddProductAllCatregory, optionsText: 'categoryName', optionsValue: 'categoryID',optionsCaption: 'Select Category', value: selectedAddProductAllCatregory,event:{change: function(){ GetSubCategoryByID() }}" required></select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <div class="form-group">
+                                                                    <label>&nbsp;</label>
+                                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_1" style="display:block;">Add New</button>
+                                                                    <!--begin::Modal-->
+                                                                    <div class="modal fade" id="kt_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title" id="exampleModalLabel">Add New Category</h5>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <div class="form-group">
+                                                                                                <label>Add Category</label>
+                                                                                                <input id="objCategoryName" placeholder="Enter Category" tabindex="1" type="text" class="form-control" data-bind="value:CategoryName" />
+                                                                                                @*<input type="text" id="objName" class="form-control" placeholder="Enter Category">*@
+                                                                                                <input type="hidden" id="objCategoryID" name="CategoryID" data-bind="text: CategoryID" />
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-auto">
+                                                                                            <div class="form-group">
+                                                                                                <label>&nbsp;</label>
+                                                                                                <button style="display:block;" data-bind="click:SaveCategory" type="button" class="btn btn-success">Save</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <table class="table table-bordered">
+                                                                                        <!--ko if:CategoryData!= null-->
+                                                                                        <!-- ko foreach:CategoryData -->
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="display:none">
+                                                                                                    <input type="hidden" id="objCategoryID" data-bind="text:CategoryID" />
+                                                                                                </td>
+                                                                                                <td>
+                                                                                                    <div class="row">
+                                                                                                        <div class="col">
+                                                                                                            <p><span data-bind="text:CategoryName" /></p>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-auto">
+                                                                                                            <button type="button" class="btn btn-warning" data-bind="click:$root.EditCategory">Edit</button>
+                                                                                                            <button type="button" class="btn btn-danger" data-bind="click:$root.DeleteCategory">Remove</button>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                        <!--/ko-->
+                                                                                        <!--/ko-->
+                                                                                    </table>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--end::Modal-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Sub Category</label>
+                                                                    <select class="form-control" id="ddsubCategoryID" name="SubCategoryID" data-bind="options: SubCategories, optionsText: 'subCategoryName', optionsValue: 'subCategoryID',optionsCaption: 'Select Sub Category', value: SelectedSubCategory" required></select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-auto">
+                                                                <div class="form-group">
+                                                                    <label>&nbsp;</label>
+                                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#kt_modal_2" style="display:block;">Add New</button>
+                                                                    <!--begin::Modal-->
+                                                                    <div class="modal fade" id="kt_modal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h5 class="modal-title" id="exampleModalLabel">Add Sub Category</h5>
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="form-group">
+                                                                                        <label>Select Main Category</label>
+                                                                                        <select class="form-control" id="CategoryID" data-bind="options: AllCategories, optionsText: 'categoryName', optionsValue: 'categoryID',optionsCaption: 'Select Category', value: selectedCategory"></select>
+
+                                                                                    </div>
+                                                                                    <div class="row">
+                                                                                        <div class="col">
+                                                                                            <div class="form-group">
+                                                                                                <label>Add Sub Category</label>
+                                                                                                <input id="subcategoryname" placeholder="enter sub category" tabindex="1" type="text" class="form-control" data-bind="value:SubCategoryName,SubCategoryNameAutoComplete:searchSubCategoryName" />
+                                                                                                @*<input type="text" class="form-control" id="subCategoryName" name="SubName" data-bind="text:SubName" placeholder="Enter Sub Category">*@
+                                                                                                <input type="hidden" id="objSubCategoryID" name="SubCategoryID" data-bind="text: SubCategoryID" />
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="col-md-auto">
+                                                                                            <div class="form-group">
+                                                                                                <label>&nbsp;</label>
+                                                                                                <button style="display:block;" data-bind="click:SaveSubCategory" type="button" class="btn btn-success">Save</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <table class="table table-bordered table-hover">
+                                                                                        <thead class="thead-light">
+                                                                                            <tr>
+                                                                                                <th>Main Category</th>
+                                                                                                <th>Sub Category</th>
+                                                                                                <th>&nbsp;</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <!--ko if:SubCategoryData!= null-->
+                                                                                            <!-- ko foreach:SubCategoryData -->
+                                                                                            <tr>
+                                                                                                <td style="display:none">
+                                                                                                    <input type="hidden" id="objsubCategoryID" data-bind="text:SubCategoriesID" />
+                                                                                                </td>
+                                                                                                <td><span data-bind="text:CategoryName" /></td>
+                                                                                                <td><span data-bind="text:SubName" /></td>
+                                                                                                <td>
+                                                                                                    <button type="button" class="btn btn-warning" data-bind="click:$root.EditSubCategory">Edit</button>
+                                                                                                    <button type="button" class="btn btn-danger" data-bind="click:$root.DeleteSubCategory">Remove</button>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <!--/ko-->
+                                                                                            <!--/ko-->
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--end::Modal-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group form-group-last">
+                                                            <label for="Textarea">Item Description</label>
+                                                            <textarea class="form-control" id="taDescription" name="Description" rows="5" required></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <button type="submit" class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u">Save</button>
+                                            </form>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--end: Form Wizard Step 1**-->
+                                <!--begin: Form Wizard Step 1.1-->
+
+                                <div class="kt-wizard-v4__content" data-ktwizard-type="step-content" data-ktwizard-state="current">
+
+                                    <div class="kt-heading kt-heading--md">Enter your Product Details</div>
+                                    <div class="kt-form__section kt-form__section--first">
+                                        <div class="kt-wizard-v4__form">
+                                            @await Html.PartialAsync("~/Views/Shared/Product/_ProductDescription.cshtml")
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end: Form Wizard Step 1.1-->
+                                <!--begin: Form Wizard Step 2**-->
+                                <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                    <div class="kt-heading kt-heading--md">Enter Inventory Details</div>
+                                    <div class="kt-form__section kt-form__section--first">
+                                        <div class="kt-wizard-v4__form">                                            
+                                            @await Html.PartialAsync("~/Views/Shared/Product/_ProductInventory.cshtml")
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end: Form Wizard Step 2-->
+                                <!--begin: Form Wizard Step 3-->
+                                <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                    <div class="kt-heading kt-heading--md">Enter Shipping Details</div>
+                                    <div class="kt-form__section kt-form__section--first">
+                                        <div class="kt-wizard-v4__form">
+                                            @await Html.PartialAsync("~/Views/Shared/Product/_ShippingDetail.cshtml")
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end: Form Wizard Step 3-->
+                                <!--begin: Form Wizard Step 4-->
+                                <div class="kt-wizard-v4__content" data-ktwizard-type="step-content">
+                                    <div class="kt-heading kt-heading--md">Draft or Publish product</div>
+                                    <div class="kt-form__section kt-form__section--first">
+                                        <div class="kt-wizard-v4__review">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option>Draft</option>
+                                                            <option>Publish</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end: Form Wizard Step 4-->
+                                <!--begin: Form Actions -->
+                                <div class="kt-form__actions">
+                                    <button class="btn btn-secondary btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-prev">
+                                        Previous
+                                    </button>
+                                    <button class="btn btn-success btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-submit">
+                                        Submit
+                                    </button>
+                                    <button class="btn btn-brand btn-md btn-tall btn-wide kt-font-bold kt-font-transform-u" data-ktwizard-type="action-next">
+                                        Next Step
+                                    </button>
+                                </div>
+                                <!--end: Form Actions -->
+                                <!--end: Form Wizard Form-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   <input type="hidden" id="hdproductID"/>
+</div>
+
+    @section scripts{
+        <script src="~/js/crop.js"></script>
+        <link href="~/css/PopUpstyle.css" rel="stylesheet" />
+        <link href="~/css/wizard-4.css" rel="stylesheet" />
+        <script src="~/js/wizard-4.js"></script>
+
+        <script src="~/Scripts/KnockoutViewModel/Product/AddProductViewModel.js" asp-append-version="true">
+            var _addProductViewModel = new AddProductViewModel();
+            ko.applyBindings(_addProductViewModel, $("#ProductDetailDiv").get(0));
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#objCategoryName').autocomplete({
+                    source: '/Product/GetCategoriesLikeCategoryName'
+                });
+            });
+
+            function isNumberKey(evt) {
+                var charCode = (evt.which) ? evt.which : evt.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+                return true;
+            }
+        </script>
+
+    }

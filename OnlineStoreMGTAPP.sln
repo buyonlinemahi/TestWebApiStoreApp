@@ -1,0 +1,132 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B791CA30-B49E-4368-8A2A-6EF41DD7BF24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{83FF8D54-1F5F-49FB-AA10-20AA229B58DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{234E07E1-DDEA-43B4-9893-6BE1EDEB2CF1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Domain.ViewModels", "OnlineStore.Domain.ViewModels\OnlineStore.Domain.ViewModels.csproj", "{58047EA0-4768-4351-94ED-317B2DAF678D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Infrastructure.ApplicationServices", "OnlineStore.Infrastructure.ApplicationServices\OnlineStore.Infrastructure.ApplicationServices.csproj", "{05D465D8-8987-44D9-B733-EDA5615BFF3F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Domain.Model", "OnlineStore.Domain.Model\OnlineStore.Domain.Model.csproj", "{28C6F6E4-C0D7-4DFB-AE81-00D963A623C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Infrastructure.ApplicationFilters", "OnlineStore.Infrastructure.ApplicationFilters\OnlineStore.Infrastructure.ApplicationFilters.csproj", "{A7FD0F93-8AEA-44BE-9869-413333719094}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Infrastructure.ApplicationServices.Contracts", "OnlineStore.Infrastructure.ApplicationServices.Contracts\OnlineStore.Infrastructure.ApplicationServices.Contracts.csproj", "{3F0F207D-9762-44A5-A643-807AF720F8AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Infrastructure.Base", "OnlineStore.Infrastructure.Base\OnlineStore.Infrastructure.Base.csproj", "{45D4A12C-7CFD-41D5-8792-7B1D41BFD725}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Infrastructure.DependencyResolution", "OnlineStore.Infrastructure.DependencyResolution\OnlineStore.Infrastructure.DependencyResolution.csproj", "{EDC4EB40-DBDF-4239-8074-8D362B3DB92A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineStore.Infrastructure.Global", "OnlineStore.Infrastructure.Global\OnlineStore.Infrastructure.Global.csproj", "{78E2CB40-3801-4FB0-B69C-6AE3A87E690E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineStoreMGTAPP", "OnlineStoreMGTAPP\OnlineStoreMGTAPP.csproj", "{4ADB6A34-FC50-409C-AA5B-3F2D56193067}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58047EA0-4768-4351-94ED-317B2DAF678D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58047EA0-4768-4351-94ED-317B2DAF678D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58047EA0-4768-4351-94ED-317B2DAF678D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58047EA0-4768-4351-94ED-317B2DAF678D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05D465D8-8987-44D9-B733-EDA5615BFF3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05D465D8-8987-44D9-B733-EDA5615BFF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05D465D8-8987-44D9-B733-EDA5615BFF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05D465D8-8987-44D9-B733-EDA5615BFF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C6F6E4-C0D7-4DFB-AE81-00D963A623C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C6F6E4-C0D7-4DFB-AE81-00D963A623C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C6F6E4-C0D7-4DFB-AE81-00D963A623C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C6F6E4-C0D7-4DFB-AE81-00D963A623C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7FD0F93-8AEA-44BE-9869-413333719094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7FD0F93-8AEA-44BE-9869-413333719094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7FD0F93-8AEA-44BE-9869-413333719094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7FD0F93-8AEA-44BE-9869-413333719094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F0F207D-9762-44A5-A643-807AF720F8AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F0F207D-9762-44A5-A643-807AF720F8AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F0F207D-9762-44A5-A643-807AF720F8AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F0F207D-9762-44A5-A643-807AF720F8AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45D4A12C-7CFD-41D5-8792-7B1D41BFD725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45D4A12C-7CFD-41D5-8792-7B1D41BFD725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45D4A12C-7CFD-41D5-8792-7B1D41BFD725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45D4A12C-7CFD-41D5-8792-7B1D41BFD725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC4EB40-DBDF-4239-8074-8D362B3DB92A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC4EB40-DBDF-4239-8074-8D362B3DB92A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC4EB40-DBDF-4239-8074-8D362B3DB92A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC4EB40-DBDF-4239-8074-8D362B3DB92A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E2CB40-3801-4FB0-B69C-6AE3A87E690E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E2CB40-3801-4FB0-B69C-6AE3A87E690E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E2CB40-3801-4FB0-B69C-6AE3A87E690E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E2CB40-3801-4FB0-B69C-6AE3A87E690E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ADB6A34-FC50-409C-AA5B-3F2D56193067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ADB6A34-FC50-409C-AA5B-3F2D56193067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ADB6A34-FC50-409C-AA5B-3F2D56193067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ADB6A34-FC50-409C-AA5B-3F2D56193067}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{58047EA0-4768-4351-94ED-317B2DAF678D} = {83FF8D54-1F5F-49FB-AA10-20AA229B58DE}
+		{05D465D8-8987-44D9-B733-EDA5615BFF3F} = {234E07E1-DDEA-43B4-9893-6BE1EDEB2CF1}
+		{28C6F6E4-C0D7-4DFB-AE81-00D963A623C2} = {83FF8D54-1F5F-49FB-AA10-20AA229B58DE}
+		{A7FD0F93-8AEA-44BE-9869-413333719094} = {234E07E1-DDEA-43B4-9893-6BE1EDEB2CF1}
+		{3F0F207D-9762-44A5-A643-807AF720F8AD} = {234E07E1-DDEA-43B4-9893-6BE1EDEB2CF1}
+		{45D4A12C-7CFD-41D5-8792-7B1D41BFD725} = {234E07E1-DDEA-43B4-9893-6BE1EDEB2CF1}
+		{EDC4EB40-DBDF-4239-8074-8D362B3DB92A} = {234E07E1-DDEA-43B4-9893-6BE1EDEB2CF1}
+		{78E2CB40-3801-4FB0-B69C-6AE3A87E690E} = {234E07E1-DDEA-43B4-9893-6BE1EDEB2CF1}
+		{4ADB6A34-FC50-409C-AA5B-3F2D56193067} = {B791CA30-B49E-4368-8A2A-6EF41DD7BF24}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BFDC15A3-47C7-4C67-88E1-714657725A0C}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs.hcrg.com:8080/tfs/hcrg
+		SccProjectUniqueName0 = OnlineStore.Domain.ViewModels\\OnlineStore.Domain.ViewModels.csproj
+		SccProjectTopLevelParentUniqueName0 = OnlineStoreMGTAPP.sln
+		SccProjectName0 = OnlineStore.Domain.ViewModels
+		SccLocalPath0 = OnlineStore.Domain.ViewModels
+		SccProjectUniqueName1 = OnlineStore.Infrastructure.ApplicationServices\\OnlineStore.Infrastructure.ApplicationServices.csproj
+		SccProjectTopLevelParentUniqueName1 = OnlineStoreMGTAPP.sln
+		SccProjectName1 = OnlineStore.Infrastructure.ApplicationServices
+		SccLocalPath1 = OnlineStore.Infrastructure.ApplicationServices
+		SccProjectUniqueName2 = OnlineStore.Domain.Model\\OnlineStore.Domain.Model.csproj
+		SccProjectTopLevelParentUniqueName2 = OnlineStoreMGTAPP.sln
+		SccProjectName2 = OnlineStore.Domain.Model
+		SccLocalPath2 = OnlineStore.Domain.Model
+		SccProjectUniqueName3 = OnlineStore.Infrastructure.ApplicationFilters\\OnlineStore.Infrastructure.ApplicationFilters.csproj
+		SccProjectTopLevelParentUniqueName3 = OnlineStoreMGTAPP.sln
+		SccProjectName3 = OnlineStore.Infrastructure.ApplicationFilters
+		SccLocalPath3 = OnlineStore.Infrastructure.ApplicationFilters
+		SccProjectUniqueName4 = OnlineStore.Infrastructure.ApplicationServices.Contracts\\OnlineStore.Infrastructure.ApplicationServices.Contracts.csproj
+		SccProjectTopLevelParentUniqueName4 = OnlineStoreMGTAPP.sln
+		SccProjectName4 = OnlineStore.Infrastructure.ApplicationServices.Contracts
+		SccLocalPath4 = OnlineStore.Infrastructure.ApplicationServices.Contracts
+		SccProjectUniqueName5 = OnlineStore.Infrastructure.Base\\OnlineStore.Infrastructure.Base.csproj
+		SccProjectTopLevelParentUniqueName5 = OnlineStoreMGTAPP.sln
+		SccProjectName5 = OnlineStore.Infrastructure.Base
+		SccLocalPath5 = OnlineStore.Infrastructure.Base
+		SccProjectUniqueName6 = OnlineStore.Infrastructure.DependencyResolution\\OnlineStore.Infrastructure.DependencyResolution.csproj
+		SccProjectTopLevelParentUniqueName6 = OnlineStoreMGTAPP.sln
+		SccProjectName6 = OnlineStore.Infrastructure.DependencyResolution
+		SccLocalPath6 = OnlineStore.Infrastructure.DependencyResolution
+		SccProjectUniqueName7 = OnlineStore.Infrastructure.Global\\OnlineStore.Infrastructure.Global.csproj
+		SccProjectTopLevelParentUniqueName7 = OnlineStoreMGTAPP.sln
+		SccProjectName7 = OnlineStore.Infrastructure.Global
+		SccLocalPath7 = OnlineStore.Infrastructure.Global
+		SccProjectUniqueName8 = OnlineStoreMGTAPP\\OnlineStoreMGTAPP.csproj
+		SccProjectTopLevelParentUniqueName8 = OnlineStoreMGT.sln
+		SccProjectName8 = OnlineStoreMGTAPP
+		SccLocalPath8 = OnlineStoreMGTAPP
+		SccLocalPath9 = .
+	EndGlobalSection
+EndGlobal
